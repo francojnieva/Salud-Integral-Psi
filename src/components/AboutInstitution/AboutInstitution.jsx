@@ -1,42 +1,35 @@
 import React from 'react'
-import { RiMentalHealthFill } from "react-icons/ri";
-import { GiHealthNormal } from "react-icons/gi";
-import { RiTeamFill } from "react-icons/ri";
-import { BiSolidInstitution } from "react-icons/bi";
-import { FaPeopleRobbery } from "react-icons/fa6";
-import { FaPeopleLine } from "react-icons/fa6";
+import InstitucionImg1 from './assets/institucion-img1.jpg'
+import InstitucionImg2 from './assets/institucion-img2.jpg'
+import InstitucionImg3 from './assets/institucion-img3.jpg'
+import { MdEmail } from "react-icons/md";
+
 
 const AboutInstitution = () => {
 
     return (
-        <section className='py-4 px-3 text-center space-y-5 font-semibold text-[#4d5b69] md:flex justify-around items-center flex-wrap md:space-y-0 md:gap-6 md:px-5'>
-            <div data-aos="fade-up" className="card w-full  text-white bg-gradient-to-r from-[#56CCF2] to-[#2F80ED] shadow-xl md:w-72 ">
-                <div className="card-body space-y-4">
-                    <p className='text-sm md:text-base'>Somos un equipo Interdisciplinario con más de 20 años de experiencia en el Área de Salud y Salud Mental en el Sistema público y privado.</p>
-                    <div className='flex justify-center items-center space-x-3'>
-                        <RiTeamFill className=' text-2xl text-[#00113A]'></RiTeamFill>
-                        <GiHealthNormal className=' text-2xl text-[#00113A]'></GiHealthNormal>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" className="card w-full  text-white bg-gradient-to-r from-[#56CCF2] to-[#2F80ED] shadow-xl md:w-72">
-                <div className="card-body px-4 space-y-4 md:px-5">
-                    <p className='text-sm md:text-base'>Nos dedicamos a asesorar y capacitar en Salud Mental, Discapacidad Intelectual y Rehabilitación Psicosocial a Instituciones, Empresas, profesionales y técnicos.</p>
-                    <div className='flex justify-center items-center space-x-3'>
-                        <RiMentalHealthFill className=' text-2xl text-[#00113A]'></RiMentalHealthFill>
-                        <BiSolidInstitution className=' text-2xl text-[#00113A]'></BiSolidInstitution>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" className="card w-full text-white bg-gradient-to-r from-[#56CCF2] to-[#2F80ED] shadow-xl md:w-72">
-                <div className="card-body space-y-4">
-                    <p className='text-sm md:text-base'>Nuestra filosofía se centra en el Modelo de Rehabilitación Basada en la Comunidad.</p>
-                    <div className='flex justify-center items-center space-x-3'>
-                        <FaPeopleRobbery className=' text-2xl text-[#00113A]'></FaPeopleRobbery>
-                        <FaPeopleLine className=' text-2xl text-[#00113A]'></FaPeopleLine>
-                    </div>
-                </div>
-            </div>
+        <section className=' py-5 px-3 space-y-10 text-center text-[#173e49] bg-[#f1f1f1] md:px-7 md:py-10 md:space-y-10 lg:px-16 xl:px-32'>
+            <article className='relative space-y-3 md:flex justify-between items-center md:space-y-0 md:pb-14 md:pt-8'>
+                <h3 className='text-lg md:w-80 md:text-xl md:text-start lg:text-3xl lg:w-[28rem] xl:lg:text-4xl'>Somos un equipo Interdisciplinario con más de 20 años de experiencia en el Área de Salud y Salud Mental en el Sistema público y privado.</h3>
+                <div className='hidden absolute w-64 h-48 top-24 right-24 md:block md:bg-[#81ddff] blur-3xl xl:w-72 xl:h-72 xl:right-44'></div>
+                <img className='relative rounded-md shadow-lg md:w-72 lg:w-96 xl:w-[28rem]' src={InstitucionImg1} alt="Salud" />
+            </article>
+            <article className='relative space-y-3 md:flex flex-row-reverse justify-between items-center md:space-y-0 md:py-8'>
+                <h3 className='text-lg md:w-72 md:text-xl md:text-start lg:text-3xl lg:w-[25rem] xl:lg:text-4xl xl:w-[28rem]'>Nos dedicamos a asesorar y capacitar en Salud Mental, Discapacidad Intelectual y Rehabilitación Psicosocial a Instituciones, Empresas, profesionales y técnicos.</h3>
+                <div className='hidden absolute w-64 h-48 top-24 left-14 md:block md:bg-[#81ddff] blur-3xl xl:w-72 xl:h-72 xl:left-6'></div>
+                <img className='relative rounded-md shadow-lg md:w-72 lg:w-96 xl:w-[28rem]' src={InstitucionImg2} alt="Salud" />
+            </article>
+            <article className='space-y-3 md:pt-10 md:flex justify-between items-center md:space-y-0'>
+                <h3 className='text-2xl md:pt-8 lg:text-4xl lg:px-10 lg:pt-12'>Nuestra filosofía se centra en el Modelo de Rehabilitación Basada en la Comunidad</h3>
+                <img className='hidden rounded-md shadow-lg md:w-80 lg:w-96' src={InstitucionImg3} alt="Salud" />
+            </article>
+            <article className='flex justify-center lg:py-7'>
+                <button className=' flex items-center p-2 text-white rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/40'>
+                    <MdEmail className='text-lg mr-2'></MdEmail>
+                    Contáctanos
+                </button>
+            </article>
+
         </section>
     )
 }

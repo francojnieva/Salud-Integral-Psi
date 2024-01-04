@@ -3,10 +3,10 @@ import { MdEmail } from "react-icons/md";
 
 const TrainingAndCourses = () => {
     return (
-        <section className='py-5 px-3'>
-            <h2 className='text-[#2c2e33] text-center text-2xl py-4'>Capacitación y cursos</h2>
-            <div className=' space-y-4'>
-                <div className="collapse collapse-plus rounded-lg bg-base-300">
+        <section className='py-7 px-3 bg-[#f1f1f1] lg:px-10'>
+            <h2 className='text-[#173e49] text-center text-2xl py-4 md:text-3xl'>Capacitación y cursos</h2>
+            <div className=' space-y-5'>
+                <div className="collapse collapse-plus rounded-lg bg-gray-300 shadow-lg">
                     <input type="radio" name="my-accordion-3" checked="checked" />
                     <div className="collapse-title text-base font-medium md:text-lg">
                         <p>Curso de Acompañante Terapéutico</p>
@@ -28,7 +28,7 @@ const TrainingAndCourses = () => {
                         </button>
                     </div>
                 </div>
-                <div className="collapse collapse-plus rounded-lg bg-base-300">
+                <div className="collapse collapse-plus rounded-lg bg-gray-300 shadow-lg">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-base font-medium md:text-lg">
                         <p>Curso de Operador Terapéutico especializado en Salud Mental</p>
@@ -50,7 +50,7 @@ const TrainingAndCourses = () => {
                         </button>
                     </div>
                 </div>
-                <div className="collapse collapse-plus rounded-lg bg-base-300">
+                <div className="collapse collapse-plus rounded-lg bg-gray-300 shadow-lg">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-base font-medium md:text-lg">
                         <p>Programa de capacitación en Dispositivos Residenciales de Rehabilitación Psicosocial destinado a Profesionales de la Salud Mental</p>
@@ -75,7 +75,7 @@ const TrainingAndCourses = () => {
                         </button>
                     </div>
                 </div>
-                <div className="collapse collapse-plus rounded-lg bg-base-300">
+                <div className="collapse collapse-plus rounded-lg bg-gray-300 shadow-lg">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-base font-medium md:text-lg">
                         <p>Asesoramiento y capacitación en la creación y gestión de Dispositivos Residenciales destinado a instituciones y organizaciones de salud</p>
