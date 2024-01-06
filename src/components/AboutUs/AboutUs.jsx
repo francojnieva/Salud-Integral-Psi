@@ -5,7 +5,7 @@ import VivianaBagaloni from './assets/Dra. Viviana Bagaloni Mastrandrea.png'
 
 const AboutUs = () => {
     return (
-        <section className='p-3 bg-gradient-to-b from-[#f1f1f1] via-[#6DD5FA] to-[#f1f1f1] md:px-8'>
+        <section className='p-3 bg-[#69b9ee8a] md:px-8'>
             <h2 className=' text-[#173e49] text-center text-2xl py-4 md:text-3xl'>Nuestros profesionales</h2>
             <div className='space-y-5 lg:flex justify-around items-center lg:space-y-0'>
                 <div className="rounded-md p-4 space-y-4 flex flex-col items-center lg:w-72 lg:h-[36rem]">

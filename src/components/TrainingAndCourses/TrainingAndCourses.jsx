@@ -3,10 +3,10 @@ import { MdEmail } from "react-icons/md";
 
 const TrainingAndCourses = () => {
     return (
-        <section className='pb-10 pt-5 px-3 bg-[#f1f1f1] lg:px-24'>
+        <section className='pb-10 pt-5 px-3 bg-[#FFF] lg:px-24'>
             <h2 className='text-[#173e49] text-center text-2xl py-4 md:text-3xl'>Capacitación y cursos</h2>
             <div className=' space-y-5'>
-                <div className="collapse collapse-plus rounded-lg bg-gray-300 shadow-md ">
+                <div className="collapse collapse-plus rounded-lg bg-gray-300 shadow-md">
                     <input type="radio" name="my-accordion-3" checked="checked" />
                     <div className="collapse-title text-base font-medium md:text-lg">
                         <p>Curso de Acompañante Terapéutico</p>
