@@ -5,10 +5,10 @@ import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 
 const Header = () => {
-	const [showMenuMobile, setshowMenuMobile] = useState(false)
+	const [showMenuMobile, setShowMenuMobile] = useState(false)
 
 	const toggleMenu = () => {
-		setshowMenuMobile(!showMenuMobile)
+		setShowMenuMobile(!showMenuMobile)
 	}
 
 	return (
