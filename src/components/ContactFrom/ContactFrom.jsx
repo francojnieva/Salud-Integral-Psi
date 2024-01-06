@@ -1,14 +1,72 @@
-import React from 'react'
-// import { useForm, Controller } from 'react-hook-form';
+import React, { useState} from 'react'
+
 
 const ContactFrom = () => {
 
-    // const { handleSubmit, control, register, formState: { errors } } = useForm()
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      })
+    
+      const [errors, setErrors] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      })
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData({
+          ...formData,
+          [name]: value,
+        })
+        setErrors({
+          ...errors,
+          [name]: '',
+        })
+      }
+    
+      const handleSubmit = (e) => {
+        e.preventDefault()
+        const validationErrors = validateForm(formData)
+        if (Object.keys(validationErrors).length === 0) {
+          alert('Formulario válido')
+        } else {
+          setErrors(validationErrors)
+        }
+      }
+    
+      const validateForm = (data) => {
+        const errors = {}
+    
+        for (const key in data) {
+          if (!data[key].trim()) {
+            errors[key] = 'Este campo es obligatorio'
+          }
+        }
+    
+        if (data.name.length > 25) {
+          errors.name = 'El nombre no debe superar los 25 caracteres'
+        }
 
-    // const onSubmit = async (data) => {
-    //     console.log(data)
-    // }
+        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+        if (!emailRegex.test(data.email)) {
+        errors.email = 'Correo electrónico inválido'
+    }
+    
+        if (data.subject.length > 30) {
+          errors.subject = 'El asunto no debe superar los 30 caracteres'
+        }
 
+        if (data.message.length > 250) {
+          errors.message = 'El mensaje no debe superar los 250 caracteres'
+        }
+    
+        return errors
+      }
 
     return (
         <section className='pb-12 bg-[#FFF] px-3'>
@@ -16,60 +74,55 @@ const ContactFrom = () => {
             <p className='text-md py-4 font-medium text-center md:pb-8'>Complete el siguiente formulario y nos pondremos en contacto lo antes posible. ¡Muchas gracias!</p>
             <div className='flex justify-center'>
                 <div className='hidden lg:block w-64 md:h-[35rem] bg-gradient-to-bl from-[#9CECFB] to-[#0052D4] rounded-l-md shadow-2xl '></div>
-                <form name="contact" method="post" className='w-full p-4 md:w-[28rem] md:h-[35rem] rounded-lg md:shadow-2xl'>
+                <form name="contact" method="post" className='w-full p-4 md:w-[28rem] md:h-[35rem] rounded-lg md:shadow-2xl' onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="contact" />
                     <div className=' flex flex-col space-y-2 mb-3'>
                         <label htmlFor="name" className=' font-bold text-sm'>Nombre:</label>
                         <input
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none'
                             type="text"
+                            placeholder='Ingrese su nombre'
                             name='name'
-                            required
+                            
+                            value={formData.name}
+                            onChange={handleChange}
                             autoComplete='off'
                             id="name"
-                            // {...register('name', {
-                            //     required: 'Este campo es obligatorio',
-                            //     maxLength: { value: 25, message: 'El nombre no debe superar los 25 caracteres' },
-                            //     minLength: { value: 3, message: 'El nombre debe tener entre 3 y 25 caracteres' },
-                            // })}
                         />
-                        {/* <span className='text-sm text-red-600 pb-3'>{errors.name && errors.name.message}</span> */}
+                        <span className='text-sm text-red-600 pb-3'>{errors.name}</span>
+
                     </div>
                     <div className=' flex flex-col space-y-2 mb-3'>
                         <label htmlFor="email" className=' font-bold text-sm'>Correo electrónico:</label>
                         <input
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none'
                             type="text"
+                            placeholder='Ingrese su correo'
                             name='email'
-                            required
+                            value={formData.email}
+                            onChange={handleChange}
+                            
                             autoComplete='off'
                             id="email"
-                            // {...register('email', {
-                            //     required: 'Este campo es obligatorio',
-                            //     pattern: {
-                            //         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                            //         message: 'Correo electrónico inválido',
-                            //     },
-                            // })}
                         />
-                        {/* <span className='text-sm text-red-600 pb-3'>{errors.email && errors.email.message}</span> */}
+                        <span className='text-sm text-red-600 pb-3'>{errors.email}</span>
+
                     </div>
                     <div className=' flex flex-col space-y-2 mb-3'>
                         <label htmlFor="subject" className=' font-bold text-sm'>Asunto:</label>
                         <input
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none'
                             type="text"
+                            placeholder='Ingrese un Asunto'
                             name='subject'
-                            required
+                            value={formData.subject}
+                            onChange={handleChange}
+                            
                             autoComplete='off'
                             id="subject"
-                            // {...register('subject', {
-                            //     required: 'Este campo es obligatorio',
-                            //     maxLength: { value: 40, message: 'El asunto no debe superar los 40 caracteres' },
-                            //     minLength: { value: 3, message: 'El nombre debe tener entre 3 y 40 caracteres' },
-                            // })}
                         />
-                        {/* <span className='text-sm text-red-600 pb-3'>{errors.subject && errors.subject.message}</span> */}
+                        <span className='text-sm text-red-600 pb-3'>{errors.subject}</span>
+
                     </div>
                     <div className=' flex flex-col space-y-2 mb-3'>
                         <label htmlFor="message" className=' font-bold text-sm'>Mensaje:</label>
@@ -77,15 +130,15 @@ const ContactFrom = () => {
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none resize-none'
                             autoComplete='off'
                             name='message'
-                            required
+                            value={formData.message}
+                            onChange={handleChange}
+                            placeholder='Ingrese su mensaje'
+                            
                             rows={5}
                             id="message"
-                            // {...register('message', {
-                            //     required: 'Este campo es obligatorio',
-                            //     maxLength: { value: 250, message: 'El mensaje no debe superar los 250 caracteres' },
-                            // })}
                         />
-                        {/* <span className='text-sm text-red-600 pb-3'>{errors.message && errors.message.message}</span> */}
+                        <span className='text-sm text-red-600 pb-3'>{errors.message}</span>
+
                     </div>
                     <button type="submit" className='bg-[#1163D8] text-[#FFF] text-sm py-2 px-4 rounded-md'>Enviar</button>
                 </form>
