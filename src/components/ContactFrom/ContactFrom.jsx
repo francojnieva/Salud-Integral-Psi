@@ -6,22 +6,7 @@ const ContactFrom = () => {
     const { handleSubmit, control, register, formState: { errors } } = useForm()
 
     const onSubmit = async (data) => {
-        try {
-          const response = await fetch('/.netlify/functions/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(data).toString(),
-          })
-      
-          if (response.ok) {
-            console.log('Formulario enviado con éxito')
-          } else {
-            console.error('Error al enviar el formulario')
-          }
-        } catch (error) {
-          console.error('Error en la solicitud de envío', error)
-        }
-      }
+    }
 
     return (
         <section className='pb-12 bg-[#FFF] px-3'>
@@ -29,13 +14,15 @@ const ContactFrom = () => {
             <p className='text-md py-4 font-medium text-center md:pb-8'>Complete el siguiente formulario y nos pondremos en contacto lo antes posible. ¡Muchas gracias!</p>
             <div className='flex justify-center'>
                 <div className='hidden lg:block w-64 md:h-[35rem] bg-gradient-to-bl from-[#9CECFB] to-[#0052D4] rounded-l-md shadow-2xl '></div>
-                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" className='w-full p-4 md:w-[28rem] md:h-[35rem] rounded-lg md:shadow-2xl' onSubmit={handleSubmit(onSubmit)}>
+                <form name="contact" action='/contact' method="POST" className='w-full p-4 md:w-[28rem] md:h-[35rem] rounded-lg md:shadow-2xl' onSubmit={handleSubmit(onSubmit)}>
                 <input type="hidden" name="form-name" value="contact" />
                     <div className=' flex flex-col space-y-2'>
                         <label htmlFor="name" className=' font-bold text-sm'>Nombre:</label>
                         <input
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none'
                             type="text"
+                            name='name'
+                            required
                             autoComplete='off'
                             id="name"
                             {...register('name', {
@@ -51,6 +38,8 @@ const ContactFrom = () => {
                         <input
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none'
                             type="text"
+                            name='email'
+                            required
                             autoComplete='off'
                             id="email"
                             {...register('email', {
@@ -68,6 +57,8 @@ const ContactFrom = () => {
                         <input
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none'
                             type="text"
+                            name='subject'
+                            required
                             autoComplete='off'
                             id="subject"
                             {...register('subject', {
@@ -83,6 +74,8 @@ const ContactFrom = () => {
                         <textarea
                             className='p-2 rounded-md bg-[#e2e2e2] text-sm font-medium outline-none resize-none'
                             autoComplete='off'
+                            name='message'
+                            required
                             rows={5}
                             id="message"
                             {...register('message', {
