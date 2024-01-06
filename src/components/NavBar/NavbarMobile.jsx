@@ -6,7 +6,7 @@ const NavbarMobile = (props) => {
 	const { showMenu } = props
 
 	return (
-		<section className={`fixed left-0 h-screen top-0 w-64 z-50 bg-[#00113A] text-white py-10 px-5 ${ showMenu ? 'left-0' : '-left-full'} transition-all`}>
+		<section className={`fixed left-0 h-screen top-0 w-64 z-50 bg-[#00113A] text-white py-10 px-5 ${ showMenu ? 'left-0' : '-left-full'} transition-all lg:hidden`}>
 			<nav>
 				<ul className=' space-y-8 font-medium'>
 					<li><a href="#">Inicio</a></li>
