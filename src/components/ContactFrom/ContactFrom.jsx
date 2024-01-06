@@ -6,24 +6,7 @@ const ContactFrom = () => {
     const { handleSubmit, control, register, formState: { errors } } = useForm()
 
     const onSubmit = async (data) => {
-
-        try {
-            const response = await fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(data).toString(),
-            })
-        
-            if (response.ok) {
-              
-              console.log('Formulario enviado con éxito')
-            } else {
-              
-              console.error('Error al enviar el formulario')
-            }
-          } catch (error) {
-            console.error('Error en la solicitud de envío', error)
-          }
+        console.log(data)
     }
 
 
