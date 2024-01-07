@@ -23,7 +23,7 @@ const AboutInstitution = () => {
                 <h3 className='text-2xl md:pt-8 lg:text-4xl lg:px-10 lg:pt-12 xl:text-5xl'>Nuestra filosofía se centra en el Modelo de Rehabilitación Basada en la Comunidad</h3>
             </article>
             <article className='flex justify-center lg:py-7'>
-                <Link to='/contact' className=' flex items-center p-2 text-white rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/40 lg:p-3'>
+                <Link to='/contact' className=' flex items-center font-medium p-2 text-white rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/40 lg:p-3'>
                     <MdEmail className='text-lg mr-2 lg:text-xl'></MdEmail>
                     Contáctanos
                 </Link>
