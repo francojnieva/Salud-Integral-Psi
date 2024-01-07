@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3, button{
+        font-family: 'Raleway', sans-serif;
+    }
+}
+
+@layer components {
+    .about-us-cards {
+        @apply rounded-md p-4 space-y-4 flex flex-col items-center lg:w-72 lg:h-[36rem]
+    }
+
+    .contact-form {
+        @apply w-full p-4 md:w-[28rem] md:h-[32rem] bg-gradient-to-bl from-[#9CECFB] via-[#45c6dd] to-[#9CECFB] rounded-lg md:shadow-2xl lg:bg-none
+    }
+
+    .contact-form input {
+        @apply p-2 rounded-md bg-[#fff] placeholder-[#737779] text-sm font-medium outline-none lg:bg-[#e2e2e2]
+    }
+
+    .collapse {
+        @apply text-[#173e49] rounded-lg bg-[#dbdbdb] shadow-md
+    }
+
+    .accordion-title {
+        @apply collapse-title text-base font-bold md:text-lg
+    }
+
+    .contact-button {
+        @apply  flex items-center py-2 text-white px-4 rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/30
+    }
+}
