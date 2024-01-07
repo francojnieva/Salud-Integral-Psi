@@ -33,7 +33,7 @@
     }
 
     .accordion-title {
-        @apply collapse-title text-base font-medium md:text-lg
+        @apply collapse-title text-base font-bold md:text-lg
     }
 
     .contact-button {
