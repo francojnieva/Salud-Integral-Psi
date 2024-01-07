@@ -1,21 +1,29 @@
 import React from 'react'
 import { MdEmail } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const NavbarMobile = (props) => {
 
-	const { showMenu } = props
+	const {showMenu, setShowMenuMobile } = props
+
+	const handleLinkClick = () => {
+		setShowMenuMobile(false)
+	  }
+
 
 	return (
 		<section className={`fixed h-screen top-0 w-64 z-50 bg-[#00113A] text-white py-10 px-5 ${ showMenu ? 'left-0' : '-left-full'} transition-all lg:hidden`}>
 			<nav>
 				<ul className=' space-y-8 font-medium'>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Nosotros</a></li>
-					<li><a href="#">Capacitación y Cursos</a></li>
-					<button className=' flex items-center p-2 text-white rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/30'>
-						<MdEmail className='text-xl mr-2'></MdEmail>
-						Contáctanos
-					</button>
+					<li><Link to='/' onClick={handleLinkClick}>Inicio</Link></li>
+					<li><Link to='/about-us' onClick={handleLinkClick}>Nosotros</Link></li>
+					<li><Link to='/training-courses' onClick={handleLinkClick}>Capacitación y Cursos</Link></li>
+					<div className=' flex justify-start'>
+						<Link to='/contact' onClick={handleLinkClick} className='contact-button'>
+							<MdEmail className='text-xl mr-2'></MdEmail>
+							Contáctanos
+						</Link>
+					</div>
 				</ul>
 			</nav>
 		</section>

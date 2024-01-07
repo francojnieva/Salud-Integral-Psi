@@ -1,20 +1,21 @@
 import React from 'react'
 import { MdEmail } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
-		<footer className=''>
+		<footer>
 			<section className="footer py-8 px-3 bg-[#00113A] text-white md:px-7 lg:px-12 xl:px-20">
 				<div>
 					<header className="footer-title">Página</header>
 					<div className=' flex flex-col space-y-5'>
-						<a className="link link-hover">Inicio</a>
-						<a className="link link-hover">Nosotros</a>
-						<a className="link link-hover">Capacitación y cursos</a>
-						<button className=' flex items-center py-2 text-white px-4 rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/30'>
+						<Link to='/' className="link link-hover">Inicio</Link>
+						<Link to='/about-us' className="link link-hover">Nosotros</Link>
+						<Link to='/training-courses' className="link link-hover">Capacitación y cursos</Link>
+						<Link to='/contact' className='contact-button'>
 							<MdEmail className='text-xl mr-2'></MdEmail>
 							Contáctanos
-						</button>
+						</Link>
 					</div>
 				</div>
 			</section>
