@@ -37,6 +37,6 @@
     }
 
     .contact-button {
-        @apply  flex items-center py-2 text-white px-4 rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/30
+        @apply  flex items-center font-medium py-2 text-white px-4 rounded-md bg-[#2F80ED] shadow-lg shadow-[#2F80ED]/30
     }
 }
