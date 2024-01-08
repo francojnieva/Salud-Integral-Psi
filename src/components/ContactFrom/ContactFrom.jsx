@@ -17,12 +17,11 @@ const ContactFrom = () => {
                             type="text"
                             placeholder='Ingrese su nombre'
                             name='name'
-                            required
+                            required    
                             autoComplete='off'
                             id="name"
                         />
                     </div>
-                    <span id='errorName'></span>
                     <div className=' flex flex-col space-y-2 mb-6'>
                         <label htmlFor="email" className='text-[#173e49] font-bold text-sm'>Correo electrónico:</label>
                         <input
@@ -48,7 +47,7 @@ const ContactFrom = () => {
                     <div className=' flex flex-col space-y-2 mb-6'>
                         <label htmlFor="message" className='text-[#173e49] font-bold text-sm'>Mensaje:</label>
                         <textarea
-                            className='p-2 rounded-md bg-[#fff] placeholder-[#737779] text-sm font-medium outline-none resize-none lg:bg-[#e2e2e2]'
+                            className='p-2 rounded-md bg-[#fff] text-[#173e49] placeholder-[#737779] text-sm font-medium outline-none resize-none lg:bg-[#e2e2e2]'
                             autoComplete='off'
                             name='message'
                             required
