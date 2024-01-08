@@ -29,7 +29,7 @@
     }
 
     .contact-form input {
-        @apply p-2 rounded-md bg-[#fff] placeholder-[#737779] text-sm font-medium outline-none lg:bg-[#e2e2e2]
+        @apply p-2 rounded-md bg-[#fff] text-[#173e49] placeholder-[#737779] text-sm font-medium outline-none lg:bg-[#e2e2e2]
     }
 
     .collapse {
