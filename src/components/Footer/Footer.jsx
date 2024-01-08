@@ -9,13 +9,13 @@ const Footer = () => {
 				<div>
 					<header className="footer-title">Página</header>
 					<div className=' flex flex-col space-y-5'>
-						<Link to='/' className="link link-hover">Inicio</Link>
-						<Link to='/about-us' className="link link-hover">Nosotros</Link>
-						<Link to='/training-courses' className="link link-hover">Capacitación y cursos</Link>
-						<Link to='/contact' className='contact-button'>
+						<a href='#home' className="link link-hover">Inicio</a>
+						<a href='#about-us' className="link link-hover">Nosotros</a>
+						<a href='#training-courses' className="link link-hover">Capacitación y cursos</a>
+						<a href='#contact' className='contact-button'>
 							<MdEmail className='text-xl mr-2'></MdEmail>
 							Contáctanos
-						</Link>
+						</a>
 					</div>
 				</div>
 			</section>
