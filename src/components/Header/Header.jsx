@@ -12,7 +12,7 @@ const Header = () => {
 	}
 
 	return (
-		<header className='w-full z-40 py-4 px-3 bg-[#00113A] text-white '>
+		<header className='fixed top-0 w-full z-40 p-4 bg-[#00113A] text-white '>
 			<div className=' flex justify-between items-center z-10 md:px-5 lg:hidden'>
 				<p>Salud Integral Psi</p>
 				<button onClick={toggleMenu}>

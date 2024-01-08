@@ -5,8 +5,8 @@ import VivianaBagaloni from './assets/Dra. Viviana Bagaloni Mastrandrea.png'
 
 const AboutUs = () => {
     return (
-        <section className='p-3 bg-[#b2ffff] md:px-8'>
-            <h2 className=' text-[#173e49] text-center text-2xl py-4 md:text-3xl'>Nuestros profesionales</h2>
+        <section id='about-us' className='px-3 mt-16 pt-12 pb-10 bg-[#b2ffff] md:px-8 lg:pt-16'>
+            <h2 className=' text-[#173e49] text-center text-2xl py-4 md:text-3xl lg:text-4xl'>Nuestros profesionales</h2>
             <div className='space-y-5 lg:flex justify-around items-center lg:space-y-0'>
                 <div className="about-us-cards">
                     <img src={SandraGarcia} alt="Lic. Sandra García Taboada" title='Lic. Sandra García Taboada' className='w-36 rounded-full  shadow-lg' />

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const TrainingAndCourses = () => {
     return (
-        <section className='pb-4 pt-2 px-3 bg-[#FFF] lg:px-24'>
-            <h2 className='text-[#173e49] text-center text-2xl py-4 md:text-3xl'>Capacitación y cursos</h2>
+        <section id='training-courses' className='pb-4 pt-12 px-3 bg-[#FFF] lg:px-24 lg:pt-16'>
+            <h2 className='text-[#173e49] text-center text-2xl py-4 md:text-3xl lg:text-4xl'>Capacitación y cursos</h2>
             <div className=' space-y-5'>
                 <div className="collapse collapse-plus">
                     <input type="radio" name="my-accordion-3" checked="checked" />
@@ -24,10 +24,10 @@ const TrainingAndCourses = () => {
                         <p>Trabajo de Campo, casos clínicos.</p>
                         <p>Manejo de contingencias, urgencias y emergencias.</p>
                         <div className=' flex justify-start '>
-                            <Link to='/contact' className=' contact-button'>
+                            <a href='#contact' className='contact-button'>
                                 <MdEmail className='text-xl mr-2'></MdEmail>
-                                Contactar para más información
-                            </Link>
+                                Contáctanos
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -48,10 +48,10 @@ const TrainingAndCourses = () => {
                         <p>Manejo de crisis y contingencias.</p>
                         <p>Trabajo de campo.</p>
                         <div className=' flex justify-start '>
-                            <Link to='/contact' className=' contact-button'>
+                            <a href='#contact' className='contact-button'>
                                 <MdEmail className='text-xl mr-2'></MdEmail>
-                                Contactar para más información
-                            </Link>
+                                Contáctanos
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -75,10 +75,10 @@ const TrainingAndCourses = () => {
                         <p>Abordaje familiar.</p>
                         <p>Elaboración de Informes.</p>
                         <div className=' flex justify-start '>
-                            <Link to='/contact' className=' contact-button'>
+                            <a href='#contact' className='contact-button'>
                                 <MdEmail className='text-xl mr-2'></MdEmail>
-                                Contactar para más información
-                            </Link>
+                                Contáctanos
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -99,10 +99,10 @@ const TrainingAndCourses = () => {
                         <p>Articulación con organismos intervinientes judiciales y extrajudiciales.</p>
                         <p>Manejo de contingencias.</p>
                         <div className=' flex justify-start '>
-                            <Link to='/contact' className=' contact-button'>
+                            <a href='#contact' className='contact-button'>
                                 <MdEmail className='text-xl mr-2'></MdEmail>
-                                Contactar para más información
-                            </Link>
+                                Contáctanos
+                            </a>
                         </div>
                     </div>
                 </div>
