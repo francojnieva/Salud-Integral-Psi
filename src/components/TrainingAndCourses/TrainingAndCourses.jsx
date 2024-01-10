@@ -1,16 +1,15 @@
 import React from 'react'
 import { MdEmail } from "react-icons/md";
-import { Link } from 'react-router-dom';
 
 const TrainingAndCourses = () => {
     return (
         <section id='training-courses' className='pb-4 pt-12 px-3 bg-[#FFF] lg:px-24 lg:pt-16'>
-            <h2 className='text-[#173e49] text-center text-2xl py-4 md:text-3xl lg:text-4xl'>Capacitación y cursos</h2>
+            <h3 className='text-[#173e49] text-center text-3xl font-bold pt-4 pb-6 lg:text-4xl'>Capacitación y cursos</h3>
             <div className=' space-y-5'>
-                <div className="collapse collapse-plus">
+                <div  className="collapse collapse-plus">
                     <input type="radio" name="my-accordion-3" checked="checked" />
                     <div className="accordion-title">
-                        <p>Curso de Acompañante Terapéutico</p>
+                        <p>CURSO DE ACOMPAÑANTE TERAPÉUTICO</p>
                     </div>
                     <div className="collapse-content space-y-5 text-[#101010] text-sm">
                         <p>El Rol del acompañante terapéutico.</p>
@@ -31,10 +30,10 @@ const TrainingAndCourses = () => {
                         </div>
                     </div>
                 </div>
-                <div className="collapse collapse-plus">
+                <div  className="collapse collapse-plus">
                     <input type="radio" name="my-accordion-3" />
                     <div className="accordion-title">
-                        <p>Curso de Operador Terapéutico especializado en Salud Mental</p>
+                        <p>CURSO DE OPERADOR TERAPÉUTICO ESPECIALIZADO EN SALUD MENTAL</p>
                     </div>
                     <div className="collapse-content space-y-5 text-[#101010] text-sm">
                         <p>La Salud Mental y su Marco Normativo.</p>
@@ -55,10 +54,10 @@ const TrainingAndCourses = () => {
                         </div>
                     </div>
                 </div>
-                <div className="collapse collapse-plus">
+                <div  className="collapse collapse-plus">
                     <input type="radio" name="my-accordion-3" />
                     <div className="accordion-title">
-                        <p>Programa de capacitación en Dispositivos Residenciales de Rehabilitación Psicosocial destinado a Profesionales de la Salud Mental</p>
+                        <p>PROGRAMA DE CAPACITACIÓN EN DISPOSITIVOS RESIDENCIALES DE REHABILITACIÓN PSICOSOCIAL DESTINADO A PROFESIONALES DE LA SALUD MENTAL</p>
                     </div>
                     <div className="collapse-content space-y-5 text-[#101010] text-sm">
                         <p>El Dispositivo Residencial (DR) en Salud Mental.</p>
@@ -82,10 +81,10 @@ const TrainingAndCourses = () => {
                         </div>
                     </div>
                 </div>
-                <div className="collapse collapse-plus">
+                <div  className="collapse collapse-plus">
                     <input type="radio" name="my-accordion-3" />
                     <div className="accordion-title">
-                        <p>Asesoramiento y capacitación en la creación y gestión de Dispositivos Residenciales destinado a instituciones y organizaciones de salud</p>
+                        <p>ASESORAMIENTO Y CAPACITACIÓN EN LA CREACIÓN Y GESTIÓN DE DISPOSITIVOS RESIDENCIALES DESTINADO A INSTITUCIONES Y ORGANIZACIONES DE SALUD</p>
                     </div>
                     <div className="collapse-content space-y-5 text-[#101010] text-sm">
                         <p>Asesoramiento en la creación y gestión de los dispositivos según requerimiento de apoyos: bajo, mediano y alto.</p>
