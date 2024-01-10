@@ -28,3 +28,5 @@ Salud Integral Psi es un proyecto desarrollado para un equipo interdisciplinario
 
 >[!WARNING]
 Es importante tener en cuenta que este proyecto, al ser un repositorio público, no cuenta con todas las especificaciones necesarias, por ejemplo, notificar a la institución cuando se completa un formulario.
+
+Para ver el proyecto haz clic [Aquí](https://saludintegral-develop.netlify.app/)
